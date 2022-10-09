@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
-const TodoSchema = new mongoose.Schema({
-  todo: {
+const CompanySchema = new mongoose.Schema({
+  name: {
     type: String,
     required: true,
   },
-  PhoneNumber: {
+  phone: {
     type: String,
     required: true,
   },
@@ -15,8 +15,8 @@ const TodoSchema = new mongoose.Schema({
   },
   userId: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 
-module.exports = mongoose.model('Todo', TodoSchema)
+module.exports = mongoose.model('Company', CompanySchema)
