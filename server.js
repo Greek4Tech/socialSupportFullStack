@@ -34,3 +34,16 @@ app.use(
       store: new MongoStore({ mongooseConnection: mongoose.connection }),
     })
   );
+
+  // Passport middleware:
+app.use(passport.initialize());
+app.use(passport.session());
+
+//home page => mainroute; find in routes folder
+app.use('/', mainRoutes);
+app.use('/socials', socialsRoutes);
+
+//Server Running
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on ${PORT}, you better catch it!`);
+  });
