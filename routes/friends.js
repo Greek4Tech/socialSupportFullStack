@@ -15,12 +15,12 @@ router.get('/edit/:friendId', friendController.getFriendPage);
 
 router.put('/edit', friendController.editFriend);
 
-router.post('/createCompany', friendController.createFriend);
+router.post('/createFriend', friendController.createFriend);
 
 router.put('/markComplete', friendController.markComplete);
 
 router.put('/markIncomplete', friendController.markIncomplete);
 
-router.delete('/deleteCompany', friendController.deleteFriend);
+router.delete('/deleteFriend', friendController.deleteFriend);
 
 module.exports = router;
