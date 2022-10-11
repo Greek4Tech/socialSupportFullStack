@@ -32,7 +32,7 @@
             </tr>
             <tr >
                <td>
-                <% companies.forEach( el => { %>
+                <% friends.forEach( el => { %>
                     <li style="list-style: none;" class='companyItem' data-id='<%=el._id%>'>
                     <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> </span>
                         
@@ -40,7 +40,7 @@
                 </td>   
                 
                 
-               <td><% companies.forEach( el => { %>
+               <td><% friends.forEach( el => { %>
                 <li style="list-style: none;"" class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'> <%= el.phone %></span>
                 <!-- <span class='del'> Delete </span> -->
@@ -49,7 +49,7 @@
 
                 <!-- delete button -->
                 <td> 
-                    <% companies.forEach( el => { %> 
+                    <% friends.forEach( el => { %> 
 
                         <li style="list-style: none;">
                             <button class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
@@ -65,7 +65,7 @@
 
                 <!-- edit button: Edit button will need work on the backend, a new page or pop up to edit any info we put in -->
                 <td> 
-                    <% companies.forEach( el => { %> 
+                    <% friends.forEach( el => { %> 
 
                         <li style="list-style: none;">
                             <button class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
@@ -87,9 +87,9 @@
          </table>
    
 
-    <h2><%= user.userName %> has <%= left %> companies left to contact</h2>
+    <h2><%= user.userName %> has <%= left %> friends left to contact</h2>
 
-    <form action="/companies/createCompany" method='POST'>
+    <form action="/friends/createFriend" method='POST'>
         <input type="text" placeholder="Company Name" name='companyName' required>
         <input type="text" placeholder="Phone Number" name='phoneNumber' required>
         <input type="submit">
