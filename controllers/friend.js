@@ -24,7 +24,7 @@ module.exports = {
     const friendId = req.params.friendId;
     try {
       const friend = await Friend.find({ _id: friendId });
-      res.render('friends.ejs', { friend: friend[0] });
+      res.render('friend.ejs', { friend: friend[0] });
     } catch (err) {
       console.log(err);
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Friends</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,6 +23,7 @@
             </tr>
             <tr >
                <td>
+                <%console.log(friends)%>
                 <% friends.forEach( el => { %>
                     <li style="list-style: none;" class='companyItem' data-id='<%=el._id%>'>
                     <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> </span>
@@ -88,6 +89,6 @@
 
     <a href="/logout">Logout</a>
 
-    <script src="js/main.js"></script>
+    <script src="js/mainF.js"></script>
 </body>
 </html>
