@@ -2,11 +2,11 @@ const { getRounds } = require('bcrypt');
 const express = require('express');
 const router = express.Router();
 const companiesController = require('../controllers/company');
+
 const { ensureAuth } = require('../middleware/auth');
 
 // protect all route to stop artificial requests
 router.use('/', ensureAuth);
-
 router.get('/', companiesController.getCompanys);
 
 // required to serve static files
