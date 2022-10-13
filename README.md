@@ -1,3 +1,4 @@
+![Hands holding black heart](/repository/psdC584.png?raw=true "Hands holding black heart")
 # SocialSupport
 
 After working in the mental health field for 10 years, I realized that some people with depressive symptoms could benefit from simple and accessible application that helps them track their support system. As a result, I created socialSupportFullStack. With this app, one can create and edit a list of social supports, which could potentially increase their sociability and decrease depressive symptoms. 
