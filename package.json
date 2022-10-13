@@ -28,5 +28,8 @@
     "pluralize": "^8.0.0",
     "sqlite3": "^5.1.2",
     "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
   }
 }
