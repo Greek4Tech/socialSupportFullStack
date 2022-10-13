@@ -9,7 +9,8 @@ const flash = require('express-flash');
 const logger = require('morgan');
 const connectDB = require('./config/database');
 const mainRoutes = require('./routes/main');
-const companiesRoutes = require('./routes/companies');
+// const companiesRoutes = require('./routes/companies');
+const friendsRoutes = require('./routes/friends')
 const googleRoutes = require('./routes/google');
 
 require('dotenv').config({ path: './config/.env' });
@@ -43,7 +44,7 @@ app.use(flash());
 
 //home page => mainroute; find in routes folder
 app.use('/', mainRoutes);
-app.use('/companies', companiesRoutes);
+app.use('/friends', friendsRoutes);
 app.use('/auth', googleRoutes)
 
 app.listen(process.env.PORT, () => {

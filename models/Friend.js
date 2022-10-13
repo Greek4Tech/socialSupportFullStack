@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const CompanySchema = new mongoose.Schema({
+const FriendSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -17,6 +17,10 @@ const CompanySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  notes: {
+    type: String,
+    required: false,
+  }
 })
 
-module.exports = mongoose.model('Company', CompanySchema)
+module.exports = mongoose.model('Friend', FriendSchema)

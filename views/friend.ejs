@@ -7,21 +7,21 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <script defer src="js/company.js"></script>
+    <script defer src="js/friend.js"></script>
 
-    <title>Edit <%=company.name%></title>
+    <title>Edit <%=friend.name%></title>
   </head>
   <body>
     <!-- PUT method -->
-    <h2>Edit Company info</h2>
-    <form action="/companies/edit" data-id="<%=company._id%>">
+    <h2>Edit Friend info</h2>
+    <form action="/friends/edit" data-id="<%=friend._id%>">
       <label for="name">
         Name:
         <input
           type="text"
-          name="companyName"
+          name="friendName"
           id="name"
-          value="<%=company.name%>"
+          value="<%=friend.name%>"
         />
       </label>
       <label for="phone">
@@ -30,12 +30,12 @@
           type="text"
           name="phoneNumber"
           id="phone"
-          value="<%=company.phone%>"
+          value="<%=friend.phone%>"
         />
       </label>
       <button type="submit">Update</button>
     </form>
 
-    <a href="/companies">Company list</a>
+    <a href="/friends">Friend list</a>
   </body>
 </html>
