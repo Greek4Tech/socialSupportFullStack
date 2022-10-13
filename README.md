@@ -1,41 +1,24 @@
-# My Awesome Project
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+# SocialSupport
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
-
-![alt tag](http://placecorgi.com/1200/650)
+After working in the mental health field for 10 years, I realized that some people with depressive symptoms could benefit from simple and accessible application that helps them track their support system. As a result, I created socialSupportFullStack. With this app, one can create and edit a list of social supports, which could potentially increase their sociability and decrease depressive symptoms. 
 
 ## How It's Made:
 
 **Tech used:** EJS, CSS, JavaScript, Node.js, Express, passport.js
 
-Back-end made entirely with Node.js. I used Sessions for authentication, and the Model View Controller (MCV) model to organize my code. <br>
-The .env file was included my .gitignore. <br>
-Be sure to include an .env file that includes a: <br>
+Back-end made entirely with Node.js. I used Sessions for authentication, and the Model View Controller (MCV) model to organize my code. 
+Be sure to add an .env file that includes a: <br>
 PORT = XXXX <br>
 MONGO_URI = XXX (connection to MongoBD with your user and pass) <br>
 GOOGLE_CLIENT_ID = XXX <br>
 GOOGLE_CLIENT_SECRET = XXX <br>
 
-
+This projects also includes two authenticaltion strategies: local and Google. 
 
 ## Optimizations
-*(optional)*
 
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+Instead of using two differnt files for authentication, schemas and authorizations, I slashed such code almost in half by combining the code for the authentications in one module. 
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
-
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
-
-**Palettable:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel
-
-
-
+Adding Google authentication on top of a local authentication was more of a headache than I had anticipated. Make sure to include a googleRoute in in your server/app. <br> You must include googleId in your User.js file (in the model folder if you are using one), for googleauth to work.
