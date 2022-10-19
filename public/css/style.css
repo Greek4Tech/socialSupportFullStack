@@ -2424,6 +2424,12 @@ html {
   line-height: 1.5rem;
 }
 
+.table-compact :where(th, td) {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -2466,6 +2472,10 @@ html {
 
 .flex-col {
   flex-direction: column;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .bg-base-200 {
