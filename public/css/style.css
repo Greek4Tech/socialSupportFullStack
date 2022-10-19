@@ -2478,6 +2478,10 @@ html {
   overflow-x: auto;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .bg-base-200 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
@@ -2490,6 +2494,11 @@ html {
 
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .py-6 {
@@ -2519,6 +2528,37 @@ html {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+ 
+    .btn.loading.px-12:before {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.px-12 {
+  height: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  min-height: 1.5rem;
+  font-size: 0.75rem;
+}
+
+.btn-square:where(.px-12) {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0px;
+}
+
+.btn-circle:where(.px-12) {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 9999px;
+  padding: 0px;
+}
+
+.px-12 {
+  border-radius: 9999px;
 }
 
 @media (min-width: 1024px) {

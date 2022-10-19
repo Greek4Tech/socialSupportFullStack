@@ -20,15 +20,16 @@
                  <%console.log(friends)%>
                  <% friends.forEach( el => { %>
                      <li style="list-style: none;" class='companyItem' data-id='<%=el._id%>'>
-                     <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> </span>
-                         
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> 
+                        </span>     
                      </li><% }) %>    
                  </td>   
                  
                  
                 <td><% friends.forEach( el => { %>
                  <li style="list-style: none;"" class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
-                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'> <%= el.phone %></span>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'> <%= el.phone %>
+                    </span>
                  <!-- <span class='del'> Delete </span> -->
                      
                  </li><% }) %></td>
@@ -38,7 +39,7 @@
                      <% friends.forEach( el => { %> 
  
                          <li style="list-style: none;">
-                             <button class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
+                             <button class="btn rounded-none px-12" data-id='<%=el._id%>'>
                                  <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
                                  
                                  <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Delete </span>
@@ -54,7 +55,7 @@
                      <% friends.forEach( el => { %> 
  
                          <li style="list-style: none;">
-                             <button class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
+                             <button class="btn rounded-none px-12" data-id='<%=el._id%>'>
                                  <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
                                  
                                  <span class='edit <%= el.completed === true ? 'completed' : 'not'%>'> Edit </span>
@@ -79,6 +80,7 @@
     
         <a href="/logout">Logout</a>
         <script src="js/mainF.js"></script>
+        
       </div>
 
       
