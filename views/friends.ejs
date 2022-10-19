@@ -72,13 +72,15 @@
              </tr>
           </tfoot>
         </table>
+    <br>
         <form action="/friends/createFriend" method='POST'>
-            <input type="text" placeholder="Friend Name" name='friendName' required>
-            <input type="text" placeholder="Phone Number" name='phoneNumber' required>
-            <input type="submit">
+            <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Friend Name" name='friendName' required>
+            <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Phone Number" name='phoneNumber' required>
+            <input class="btn btn-active btn-link" type="submit">
         </form>
-    
-        <a href="/logout">Logout</a>
+    <br>
+        <button class="btn btn-outline" onclick="window.location.href='/logout'">Log Out by clicking here.</button>
+        
         <script src="js/mainF.js"></script>
         
       </div>

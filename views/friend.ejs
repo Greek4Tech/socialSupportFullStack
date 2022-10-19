@@ -9,15 +9,19 @@
 
     <script defer src="js/friend.js"></script>
 
-    <title>Edit <%=friend.name%></title>
+    <!-- <title>Edit <%=friend.name%></title> -->
   </head>
   <body>
     <!-- PUT method -->
     <h2>Edit Friend info</h2>
+  </form>
     <form action="/friends/edit" data-id="<%=friend._id%>">
       <label for="name">
+        
         Name:
+        
         <input
+          class="input input-bordered input-primary w-full max-w-xs"
           type="text"
           name="friendName"
           id="name"
@@ -27,15 +31,20 @@
       <label for="phone">
         Phone Number:
         <input
+          class="input input-bordered input-primary w-full max-w-xs"
           type="text"
           name="phoneNumber"
           id="phone"
           value="<%=friend.phone%>"
         />
       </label>
-      <button type="submit">Update</button>
+      <br>
+      <br>
+      <button class="btn btn-ghost" type="submit">Update</button>
     </form>
+    <br>
 
-    <a href="/friends">Friend list</a>
+    <button class="btn btn-ghost" onclick="window.location.href='/friends'">Back to the friends list</button>
+    
   </body>
 </html>
