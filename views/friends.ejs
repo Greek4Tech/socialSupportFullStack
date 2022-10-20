@@ -19,7 +19,7 @@
                 <td>
                  <%console.log(friends)%>
                  <% friends.forEach( el => { %>
-                     <li style="list-style: none;" class='companyItem' data-id='<%=el._id%>'>
+                     <li style="list-style-type: number" class='companyItem' data-id='<%=el._id%>'>
                         <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> 
                         </span>     
                      </li><% }) %>    
