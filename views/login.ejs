@@ -1,46 +1,61 @@
 <%- include('partials/header') -%>
 
-<main class="container">
-  <div class="row justify-content-center">
-    <section class="col-6 mt-5">
-      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
-      messages.info.forEach( el => { %>
-      <div class="alert alert-info"><%= el.msg %></div>
-      <% }) %> <% } %>
-      <form action="/login" method="POST">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            name="email"
-          />
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="text-center lg:text-left">
+      <h1 class="text-5xl font-bold">Login now!</h1>
+      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+    </div>
+    <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <!-- the form -->
+      <div class="card-body">
+        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+          <div class="alert alert-danger"><%= el.msg %></div>
+          <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+          messages.info.forEach( el => { %>
+          <div class="alert alert-info"><%= el.msg %></div>
+          <% }) %> <% } %>
+        <form action="/login" method="POST">
+        <div class="form-control">
+          <label for="exampleInputEmail1" class="label">
+            <span class="label-text">Email address</span>
+          </label>
+          <input 
+          type="email"
+          placeholder="email" 
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+          class="input input-bordered" />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            name="password"
-          />
+        <div class="form-control">
+          <label for="exampleInputPassword1" class="label">
+            <span class="label-text">Password</span>
+          </label>
+
+          <input 
+          type="password" 
+          placeholder="password" 
+          class="input input-bordered"
+          id="exampleInputPassword1"
+          name="password" />
+
+          <label class="label">
+            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+          </label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-control mt-6">
+          <button class="btn btn-primary">Login</button>
+        </div>
+        <div class="form-control mt-6">
+          <a href="/auth/google" class="btn red darken-1">
+              <i class="fab fa-google left"></i> Log in with Google
+          </a>
+      </div>
       </form>
-    </section>
+      </div>
+    </div>
   </div>
-  <hr>
-  <div class="section">
-    <a href="/auth/google" class="btn red darken-1">
-        <i class="fab fa-google left"></i> Log in with Google
-    </a>
 </div>
-</main>
 
 <%- include('partials/footer') -%>

@@ -1,94 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>List of friends</h1>
-    
-    
+<%- include('partials/header') -%>
 
-        <!-- creating a table for our list -->
-        <table>
+    <div class="overflow-x-auto">
+        <table class="table table-compact w-full">
+          <thead>
             <tr>
-               <th>Friend's Name</th>
-               <th>Phone Number</th>
-               <!-- <th>Add a note</th> -->
-               <th>Action </th>
-               <th>Edit </th>
+              <th>Friend's Name</th> 
+              <th>Phone Number</th> 
+              <th>Action</th> 
+              <th>Edit</th> 
+              <!-- <th>Notes</th> 
+              <th>Photo</th> -->
             </tr>
-            <tr >
-               <td>
-                <%console.log(friends)%>
-                <% friends.forEach( el => { %>
-                    <li style="list-style: none;" class='companyItem' data-id='<%=el._id%>'>
-                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> </span>
-                        
-                    </li><% }) %>    
-                </td>   
-                
-                
-               <td><% friends.forEach( el => { %>
-                <li style="list-style: none;"" class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'> <%= el.phone %></span>
-                <!-- <span class='del'> Delete </span> -->
-                    
-                </li><% }) %></td>
+          </thead> 
+          <tbody>
+            <!-- Use JS to create a list that automagically updates every time we add or remove contacts -->
+        
+             <tr >
+                <td>
+                 <%console.log(friends)%>
+                 <% friends.forEach( el => { %>
+                     <li style="list-style: none;" class='companyItem' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> 
+                        </span>     
+                     </li><% }) %>    
+                 </td>   
+                 
+                 
+                <td><% friends.forEach( el => { %>
+                 <li style="list-style: none;"" class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'> <%= el.phone %>
+                    </span>
+                 <!-- <span class='del'> Delete </span> -->
+                     
+                 </li><% }) %></td>
+ 
+                 <!-- delete button -->
+                 <td> 
+                     <% friends.forEach( el => { %> 
+ 
+                         <li style="list-style: none;">
+                             <button class="btn rounded-none px-12" data-id='<%=el._id%>'>
+                                 <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
+                                 
+                                 <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Delete </span>
+ 
+                                 </button>
+                         </li>
+ 
+                     <% }) %>
+                 </td>
+ 
+                 <!-- edit button: Edit button will need work on the backend, a new page or pop up to edit any info we put in -->
+                 <td> 
+                     <% friends.forEach( el => { %> 
+ 
+                         <li style="list-style: none;">
+                             <button class="btn rounded-none px-12" data-id='<%=el._id%>'>
+                                 <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
+                                 
+                                 <span class='edit <%= el.completed === true ? 'completed' : 'not'%>'> Edit </span>
+ 
+                                 </button>
+                         </li>
+ 
+                     <% }) %>
+                 </td>
+ 
+ 
+ 
+ 
+             </tr>
+          </tfoot>
+        </table>
+    <br>
+        <form action="/friends/createFriend" method='POST'>
+            <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Friend Name" name='friendName' required>
+            <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Phone Number" name='phoneNumber' required>
+            <input class="btn btn-active btn-link" type="submit">
+        </form>
+    <br>
+        <button class="btn btn-outline" onclick="window.location.href='/logout'">Log Out by clicking here</button>
+        
+        <script src="js/mainF.js"></script>
+        
+      </div>
 
-                <!-- delete button -->
-                <td> 
-                    <% friends.forEach( el => { %> 
+      
 
-                        <li style="list-style: none;">
-                            <button class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
-                                <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
-                                
-                                <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Delete </span>
-
-                                </button>
-                        </li>
-
-                    <% }) %>
-                </td>
-
-                <!-- edit button: Edit button will need work on the backend, a new page or pop up to edit any info we put in -->
-                <td> 
-                    <% friends.forEach( el => { %> 
-
-                        <li style="list-style: none;">
-                            <button class='PhoneNumber' class='companyItem' data-id='<%=el._id%>'>
-                                <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
-                                
-                                <span class='edit <%= el.completed === true ? 'completed' : 'not'%>'> Edit </span>
-
-                                </button>
-                        </li>
-
-                    <% }) %>
-                </td>
-
-
-
-
-            </tr>
-            
-         </table>
-   
-
-    <h2><%= user.userName %> has <%= left %> friends left to contact</h2>
-
-    <form action="/friends/createFriend" method='POST'>
-        <input type="text" placeholder="Friend Name" name='friendName' required>
-        <input type="text" placeholder="Phone Number" name='phoneNumber' required>
-        <input type="submit">
-    </form>
-
-    <a href="/logout">Logout</a>
-
-    <script src="js/mainF.js"></script>
-</body>
-</html>
+      <%- include('partials/footer') -%>
