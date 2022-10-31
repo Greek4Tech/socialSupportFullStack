@@ -2024,6 +2024,13 @@ html {
   color: hsl(var(--inc, var(--nc)) / var(--tw-text-opacity));
 }
 
+.alert-success {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--suc, var(--nc)) / var(--tw-text-opacity));
+}
+
 .btn-outline .badge {
   --tw-border-opacity: 1;
   border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
@@ -2964,4 +2971,20 @@ html {
   .lg\:text-left {
     text-align: left;
   }
+}
+
+li.companyItem.alert.alert-info {
+  margin-top: 1vh;
+}
+
+li.PhoneNumber.alert.alert-success {
+  margin-top: 1vh;
+}
+
+button.alert.alert-info.btn-active.btn-ghost {
+  margin-top: 1vh;
+}
+
+button.alert.alert-info.btn-active.btn-primary {
+  margin-top: 1vh;
 }
