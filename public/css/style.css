@@ -2988,3 +2988,28 @@ button.alert.alert-info.btn-active.btn-ghost {
 button.alert.alert-info.btn-active.btn-primary {
   margin-top: 1vh;
 }
+
+th {
+  text-align: center;
+}
+
+/* FORM changes */
+/* Center */
+
+form {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.max-w-xs {
+  max-width: 24rem;
+  margin-top: 1vh;
+}
+
+/* Log out button */
+.logOutButton {
+  display: flex;
+  justify-content: space-around;
+}
