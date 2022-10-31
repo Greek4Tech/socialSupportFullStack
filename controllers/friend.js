@@ -1,4 +1,5 @@
 const Friend = require('../models/Friend');
+const validator = require('validator')
 
 module.exports = {
   getFriends: async (req, res) => {
