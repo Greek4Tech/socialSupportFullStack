@@ -3012,4 +3012,16 @@ form {
 .logOutButton {
   display: flex;
   justify-content: space-around;
+  margin-top: -3vh;
+  margin-bottom: 4vh;
+}
+
+/* friend.js edit "Edit Friend List" header */
+.bg-base-300.navbar-center {
+  display: grid;
+}
+
+.editBack {
+  display: flex;
+  justify-content: space-around;
 }
