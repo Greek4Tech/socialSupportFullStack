@@ -47,17 +47,19 @@
                        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
                        <div class="modal modal-bottom sm:modal-middle">
                          <div class="modal-box">
-                           <h3 class="font-bold text-lg">Hey, just checking</h3>
+                           <h3 class="font-bold text-lg">Hey, just checking..</h3>
                            <p class="py-4">Did you mean to hit the delete button?</p>
                            
                            <button class="'del <%= el.completed === true ? 'completed' : 'not'%>'> alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
                              <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
 
-                             <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Yes, Delete this contact </span>
+                             <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Yes, delete this contact. </span>
 
                            </button>
 
-                           <label for="my-modal-6" class="btn btn-circle">Nope, it was a mistake. Take me back</label>
+                           <br>
+
+                           <label for="my-modal-6" class="btn btn-circle">Nope, it was a mistake. Take me back.</label>
                            
                          </div>
                        </div>
