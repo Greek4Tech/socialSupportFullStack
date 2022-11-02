@@ -3285,8 +3285,8 @@ label.alert.alert-info {
 /* modal button, pop up */
 
 button.\'del.not\'\>.alert.alert-info.btn-active.btn-ghost {
-  width: 11vh;
+  width: auto;
   display: flex;
   justify-content: space-around;
-  margin-left: 26.6vh;
+  margin-left: 28%;
 }
