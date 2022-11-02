@@ -3271,3 +3271,11 @@ label.alert.alert-info {
   display: flex;
   justify-content: space-around;
 }
+
+.btn-circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  padding: 0px;
+  margin-left: 42%;
+}
