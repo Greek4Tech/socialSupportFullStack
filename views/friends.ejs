@@ -36,19 +36,36 @@
  
                  <!-- delete button -->
                  <td> 
-                     <% friends.forEach( el => { %> 
- 
-                         <li style="list-style: none;">
-                             <button class="alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
-                                 <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
-                                 
-                                 <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Delete </span>
- 
-                                 </button>
-                         </li>
- 
-                     <% }) %>
-                 </td>
+                    <% friends.forEach( el => { %> 
+
+                        <li style="list-style: none;">
+
+                       <!-- The button to open modal -->
+                       <label for="my-modal-6" class="alert alert-info">Delete Contact</label>
+
+                       <!-- Put this part before </body> tag -->
+                       <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                       <div class="modal modal-bottom sm:modal-middle">
+                         <div class="modal-box">
+                           <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+                           <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                           
+                           <button class="'del <%= el.completed === true ? 'completed' : 'not'%>'> alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
+                             <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
+
+                             <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Delete </span>
+
+                           </button>
+
+                           <label for="my-modal-6" class="btn btn-circle alert alert-info btn-active btn-ghost">Yay!</label>
+                           
+                         </div>
+                       </div>
+
+                        </li>
+
+                    <% }) %>
+                </td>
  
                  <!-- edit button: Edit button will need work on the backend, a new page or pop up to edit any info we put in -->
                  <td> 
