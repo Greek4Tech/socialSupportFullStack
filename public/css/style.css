@@ -3296,9 +3296,14 @@ label.btn.btn-circle {
   margin-left: 14%;
 }
 
-/* h3 modal */
+/* h3 & p modal */
 
 h3.font-bold.text-lg {
+  display: flex;
+  justify-content: space-around;
+}
+
+p.py-4 {
   display: flex;
   justify-content: space-around;
 }
