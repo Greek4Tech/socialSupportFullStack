@@ -3290,3 +3290,15 @@ button.\'del.not\'\>.alert.alert-info.btn-active.btn-ghost {
   justify-content: space-around;
   margin-left: 28%;
 }
+
+label.btn.btn-circle {
+  width: 69%;
+  margin-left: 14%;
+}
+
+/* h3 modal */
+
+h3.font-bold.text-lg {
+  display: flex;
+  justify-content: space-around;
+}
