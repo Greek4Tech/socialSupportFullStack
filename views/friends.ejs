@@ -36,22 +36,21 @@
  
                  <!-- delete button -->
                  <td> 
-                    <% friends.forEach( el => { %> 
+                  <% friends.forEach((el, i) => { %>
 
                         <li style="list-style: none;">
 
                        <!-- The button to open modal -->
-                       <label for="my-modal-6" class="alert alert-info">Delete Contact</label>
+                       <label for="frield-modal-<%= i %>" class="alert alert-info">Delete Contact</label>
 
                        <!-- Put this part before </body> tag -->
-                       <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                       <input type="checkbox" id="frield-modal-<%= i %>" class="modal-toggle" />
                        <div class="modal modal-bottom sm:modal-middle">
                          <div class="modal-box">
                            <h3 class="font-bold text-lg">Hey, just checking..</h3>
                            <p class="py-4">Did you mean to hit the delete button?</p>
                            
-                           <button class="'del <%= el.completed === true ? 'completed' : 'not'%>'> alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
-                             <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
+                           <button class="alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
 
                              <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Yes, delete this contact. </span>
 
@@ -59,7 +58,7 @@
 
                            <br>
 
-                           <label for="my-modal-6" class="btn btn-circle">Nope, it was a mistake. Take me back.</label>
+                           <label for="frield-modal-<%= i %>" class="btn btn-circle">Nope, it was a mistake. Take me back.</label>
                            
                          </div>
                        </div>
