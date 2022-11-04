@@ -3333,4 +3333,16 @@ input.btn.glass {
 
   .howItWorks {
     margin-bottom: 4vh;
+    color:#ffffff
+}
+
+/* h1 index */
+
+h1.mb-5.text-5xl.font-bold {
+  color: white;
+}
+
+/* p index */
+p.mb-5 {
+  color: aliceblue;
 }
