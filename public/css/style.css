@@ -3327,4 +3327,10 @@ button.btn.btn-outline {
 /* submit button */
 input.btn.glass {
   margin-top: 1vh;
+}
 
+  /* How it works link, index page */
+
+  .howItWorks {
+    margin-bottom: 4vh;
+}
