@@ -41,7 +41,7 @@
                         <li style="list-style: none;">
 
                        <!-- The button to open modal -->
-                       <label for="frield-modal-<%= i %>" class="alert alert-info">Delete Contact</label>
+                       <label for="frield-modal-<%= i %>" class="alert alert-info">Delete</label>
 
                        <!-- Put this part before </body> tag -->
                        <input type="checkbox" id="frield-modal-<%= i %>" class="modal-toggle" />
@@ -91,11 +91,13 @@
           </tfoot>
         </table>
     <br>
+    <div>
         <form action="/friends/createFriend" method='POST'>
             <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Add a friend's name here" name='friendName' required>
             <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Add a friend's phone number here" name='phoneNumber' required>
             <input class="btn glass" type="submit">
         </form>
+      </div>
     <br>
             <div class="logOutButton">
                 <button class="btn btn-outline" onclick="window.location.href='/logout'">Log Out by clicking here</button>
