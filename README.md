@@ -20,7 +20,7 @@ This projects also includes two authenticaltion strategies: local and Google.
 
 ## Optimizations
 
-Instead of using two differnt files for authentication, schemas and authorizations, I slashed such code almost in half by combining the code for the authentications in one module. 
+Add an email verification system! 
 
 ## Lessons Learned:
 
