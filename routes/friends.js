@@ -1,3 +1,4 @@
+// has passwords
 const { getRounds } = require('bcrypt');
 const express = require('express');
 const router = express.Router();
