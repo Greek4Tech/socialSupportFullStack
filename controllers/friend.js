@@ -14,7 +14,7 @@ module.exports = {
       // const friends = await Friend.find()
       res.render('friends.ejs', {
         friends: friends,
-        left: friendsLeft,
+        // left: friendsLeft,
         user: req.user,
       });
     } catch (err) {

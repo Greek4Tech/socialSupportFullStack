@@ -18,10 +18,6 @@ router.put('/edit', friendController.editFriend);
 
 router.post('/createFriend', friendController.createFriend);
 
-router.put('/markComplete', friendController.markComplete);
-
-router.put('/markIncomplete', friendController.markIncomplete);
-
 router.delete('/deleteFriend', friendController.deleteFriend);
 
 module.exports = router;
