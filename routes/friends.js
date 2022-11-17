@@ -1,3 +1,4 @@
+// has passwords
 const { getRounds } = require('bcrypt');
 const express = require('express');
 const router = express.Router();
@@ -16,10 +17,6 @@ router.get('/edit/:friendId', friendController.getFriendPage);
 router.put('/edit', friendController.editFriend);
 
 router.post('/createFriend', friendController.createFriend);
-
-router.put('/markComplete', friendController.markComplete);
-
-router.put('/markIncomplete', friendController.markIncomplete);
 
 router.delete('/deleteFriend', friendController.deleteFriend);
 
