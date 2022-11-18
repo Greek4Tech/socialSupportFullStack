@@ -1,113 +1,117 @@
 <%- include('partials/header') -%>
 
-    <div class="overflow-x-auto">
-        <table class="table table-compact w-full">
-          <thead>
-            <tr>
-              <th>Friend's Name</th> 
-              <th>Phone Number</th> 
-              <th>Action</th> 
-              <th>Edit</th> 
-              <!-- <th>Notes</th> 
+<div class="overflow-x-auto">
+  <table class="table table-compact w-full">
+    <thead>
+      <tr>
+        <th>Friend's Name</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+        <th>Edit</th>
+        <!-- <th>Notes</th> 
               <th>Photo</th> -->
-            </tr>
-          </thead> 
-          <tbody>
-            <!-- Use JS to create a list that automagically updates every time we add or remove contacts -->
-        
-             <tr  >
-                <td >
-                 <%console.log(friends)%>
-                 <% friends.forEach( el => { %>
-                     <li style="list-style-type: number" class='companyItem alert alert-info' data-id='<%=el._id%>'>
-                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.name %> 
-                        </span>     
-                     </li><% }) %>    
-                 </td>   
-                 
-                 
-                <td><% friends.forEach( el => { %>
-                 <li style="list-style: none;"" class='PhoneNumber alert alert-success' class='companyItem' data-id='<%=el._id%>'>
-                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'> <%= el.phone %>
-                    </span>
-                 <!-- <span class='del'> Delete </span> -->
-                     
-                 </li><% }) %></td>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Use JS to create a list that automagically updates every time we add or remove contacts -->
+
+      <tr>
+        <td>
+          <%console.log(friends)%>
+          <% friends.forEach( el => { %>
+          <li style="list-style-type: number" class='friendItem alert alert-info' data-id='<%=el._id%>'>
+            
+            <span><%= el.name %></span>
+          
+          </li><% }) %>
+        </td>
+
+
+        <td>
+          <% friends.forEach( el => { %>
+          <li style="list-style: none;"" class='PhoneNumber alert alert-success' data-id='<%=el._id%>'>
+            
+            <span> <%= el.phone %></span>
+                                           
+          </li><% }) %>
+                
+                </td>
  
                  <!-- delete button -->
                  <td> 
                   <% friends.forEach((el, i) => { %>
 
-                        <li style="list-style: none;">
+                        <li style=" list-style: none;">
 
-                       <!-- The button to open modal -->
-                       <label for="frield-modal-<%= i %>" class="alert alert-info">Delete</label>
+            <!-- The button to open modal -->
+            <label for="frield-modal-<%= i %>" class="alert alert-info">Delete</label>
 
-                       <!-- Put this part before </body> tag -->
-                       <input type="checkbox" id="frield-modal-<%= i %>" class="modal-toggle" />
-                       <div class="modal modal-bottom sm:modal-middle">
-                         <div class="modal-box">
-                           <h3 class="font-bold text-lg">Hey, just checking..</h3>
-                           <p class="py-4">Did you mean to hit the delete button?</p>
-                           
-                           <button class="alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="frield-modal-<%= i %>" class="modal-toggle" />
+            <div class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="font-bold text-lg">Hey, just checking..</h3>
+                <p class="py-4">Did you mean to hit the delete button?</p>
 
-                             <span class='del <%= el.completed === true ? 'completed' : 'not'%>'> Yes, delete this contact. </span>
+                <button class="alert alert-info btn-active btn-ghost" data-id='<%=el._id%>'>
 
-                           </button>
+                  <span class='del'> Yes, delete this contact. </span>
 
-                           <br>
+                </button>
 
-                           <label for="frield-modal-<%= i %>" class="btn btn-circle">Nope, it was a mistake. Take me back.</label>
-                           
-                         </div>
-                       </div>
+                <br>
 
-                        </li>
+                <label for="frield-modal-<%= i %>" class="btn btn-circle">Nope, it was a mistake. Take me back.</label>
 
-                    <% }) %>
-                </td>
- 
-                 <!-- edit button: Edit button will need work on the backend, a new page or pop up to edit any info we put in -->
-                 <td> 
-                     <% friends.forEach( el => { %> 
- 
-                         <li style="list-style: none;">
-                             <button class="alert alert-info btn-active btn-primary" data-id='<%=el._id%>'>
-                                 <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'> -->
-                                 
-                                 <span class='edit <%= el.completed === true ? 'completed' : 'not'%>'> Edit </span>
- 
-                                 </button>
-                         </li>
- 
-                     <% }) %>
-                 </td>
- 
- 
- 
- 
-             </tr>
-          </tfoot>
-        </table>
-    <br>
-    <div>
-        <form action="/friends/createFriend" method='POST'>
-            <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Add a friend's name here" name='friendName' required>
-            <input class="input input-bordered input-primary w-full max-w-xs" type="text" placeholder="Add a friend's phone number here" name='phoneNumber' required>
-            <input class="btn glass" type="submit">
-        </form>
-      </div>
-    <br>
-            <div class="logOutButton">
-                <button class="btn btn-outline" onclick="window.location.href='/logout'">Log Out by clicking here</button>
+              </div>
             </div>
 
-    
-            <script src="js/mainF.js"></script>
-        
-      </div>
+          </li>
 
-      
+          <% }) %>
+        </td>
 
-      <%- include('partials/footer') -%>
+        <!-- edit button: Edit button will need work on the backend, a new page or pop up to edit any info we put in -->
+        <td>
+          <% friends.forEach( el => { %>
+
+          <li style="list-style: none;">
+            <button class="alert alert-info btn-active btn-primary" data-id='<%=el._id%>'>
+
+              <span class='edit'> Edit </span>
+
+            </button>
+          </li>
+
+          <% }) %>
+        </td>
+
+
+
+
+      </tr>
+      </tfoot>
+  </table>
+  <br>
+  <div>
+    <form action="/friends/createFriend" method='POST'>
+      <input class="input input-bordered input-primary w-full max-w-xs" type="text"
+        placeholder="Add a friend's name here" name='friendName' required>
+      <input class="input input-bordered input-primary w-full max-w-xs" type="text"
+        placeholder="Add a friend's phone number here" name='phoneNumber' required>
+      <input class="btn glass" type="submit" value="Submit">
+    </form>
+  </div>
+  <br>
+  <div class="logOutButton">
+    <button class="btn btn-outline" onclick="window.location.href='/logout'">Log Out by clicking here</button>
+  </div>
+
+
+  <script src="js/mainF.js"></script>
+
+</div>
+
+
+
+<%- include('partials/footer') -%>

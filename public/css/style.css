@@ -3215,7 +3215,7 @@ body[dir="rtl"] .checkbox:checked,
   }
 }
 
-li.companyItem.alert.alert-info {
+li.friendItem.alert.alert-info {
   margin-top: 1vh;
 }
 

@@ -11,7 +11,7 @@ module.exports = {
         userId: req.user.id,
         completed: false,
       });
-      // const friends = await Friend.find()
+      // console.log(friends)
       res.render('friends.ejs', {
         friends: friends,
         // left: friendsLeft,
@@ -88,7 +88,7 @@ module.exports = {
     }
   },
   deleteFriend: async (req, res) => {
-    console.log('in delete');
+    console.log('Deleting friend');
     console.log(req.body);
     console.log(req.body.friendIdFromJSFile);
     try {
